@@ -1,0 +1,33 @@
+extends typescript
+
+snippet improptypes "import prop-types"
+import PropTypes from 'prop-types'
+endsnippet
+
+snippet rfc "react functional component"
+const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props}) => {
+	return (
+		${3:<></>}
+	)
+}
+endsnippet
+
+snippet ustate "use state"
+const [${1:item}, ${2:setItem}] = useState<$3>($4)
+endsnippet
+
+snippet dispatch "dispatch"
+dispatch(${1:action})
+endsnippet
+
+snippet expropTypes "export propTypes"
+export const propTypes = {
+	${1:${VISUAL}}
+}$0
+endsnippet
+
+snippet exdefaultProps "export defaultProps"
+export const defaultProps = {
+	${1:${VISUAL}}
+}$0
+endsnippet

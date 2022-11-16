@@ -1,0 +1,107 @@
+# {{{ imports
+
+snippet im "import"
+import $1 from '$2'
+endsnippet
+
+snippet imreact "import react"
+import React from 'react'
+endsnippet
+
+snippet imclassnames "import classnames"
+import classNames from 'classnames'
+endsnippet
+
+# {{{ lodash
+
+snippet im_keys "import lodash _keys"
+import _keys from 'lodash/keys'
+endsnippet
+
+snippet im_values "import lodash _values"
+import _values from 'lodash/values'
+endsnippet
+
+snippet im_flatten "import lodash _flatten"
+import _flatten from 'lodash/flatten'
+endsnippet
+
+snippet im_uniq "import lodash _uniq"
+import _uniq from 'lodash/uniq'
+endsnippet
+
+snippet im_isEmpty "import lodash _isEmpty"
+import _isEmpty from 'lodash/isEmpty'
+endsnippet
+
+snippet im_isObject "import lodash _isObject"
+import _isObject from 'lodash/isObject'
+endsnippet
+
+snippet im_isArray "import lodash _isArray"
+import _isArray from 'lodash/isArray'
+endsnippet
+
+snippet im_isFinite "import lodash _isFinite"
+import _isFinite from 'lodash/isFinite'
+endsnippet
+
+snippet im_isFunction "import lodash _isFunction"
+import _isFunction from 'lodash/isFunction'
+endsnippet
+
+snippet im_uniqBy "import lodash _uniqBy"
+import _uniqBy from 'lodash/uniqBy'
+endsnippet
+
+snippet im_compact "import lodash _compact"
+import _compact from 'lodash/compact'
+endsnippet
+
+snippet im_sum "import lodash _sum"
+import _sum from 'lodash/sum'
+endsnippet
+
+snippet im_min "import lodash _min"
+import _min from 'lodash/min'
+endsnippet
+
+snippet im_max "import lodash _max"
+import _max from 'lodash/max'
+endsnippet
+
+snippet im_chunk "import lodash _chunk"
+import _chunk from 'lodash/chunk'
+endsnippet
+
+# }}}
+
+# }}}
+
+snippet ret "return"
+return $1
+endsnippet
+
+snippet genfunc "generator function"
+function* ${1:name}($2) {
+	$0
+}
+endsnippet
+
+snippet afunc "anonymous function"
+const ${1:name} = ($2): $3 => {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet if "if statement"
+if ($1) {
+	$0
+}
+endsnippet
+
+snippet for "for loop"
+for (let ${1:i} = ${2:0}; $3, ${4:i += 1}) {
+	${0:${VISUAL}}
+}
+endsnippet
