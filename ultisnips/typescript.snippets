@@ -12,6 +12,7 @@ snippet imclassnames "import classnames"
 import classNames from 'classnames'
 endsnippet
 
+# }}}
 # {{{ lodash
 
 snippet im_includes "import lodash _includes"
@@ -79,8 +80,22 @@ import _chunk from 'lodash/chunk'
 endsnippet
 
 # }}}
+# {{{ general 
 
-# }}}
+snippet exp "export"
+export $1
+$0
+endsnippet
+
+snippet exdef "export default"
+export default $1
+$0
+endsnippet
+
+snippet exob "export { ... }"
+export { $1 }
+$0
+endsnippet
 
 snippet ret "return"
 return $1
@@ -109,3 +124,91 @@ for (let ${1:i} = ${2:0}; $3, ${4:i += 1}) {
 	${0:${VISUAL}}
 }
 endsnippet
+
+# }}}
+# {{{ tests
+
+snippet desc "describe"
+describe('$1', () => {
+	$0
+})
+endsnippet
+
+snippet it "it"
+it('$1', () => {
+	$0
+})
+endsnippet
+
+snippet ita "it"
+it('$1', async () => {
+	$0
+})
+endsnippet
+
+snippet expe "expect"
+expect($1).$2
+endsnippet
+
+snippet expetext "expect(...).toHaveTextContent(...)"
+expect($1).toHaveTextContent('$2')
+$0
+endsnippet
+
+snippet expeeq "expect(...).toEqual(...)"
+expect($1).toEqual($2)
+$0
+endsnippet
+
+snippet expedef "expect(...).toBeDefined()"
+expect($1).toBeDefined()
+$0
+endsnippet
+
+snippet expesnap "expect(...).toMatchSnapshot()"
+expect($1).toMatchSnapshot()
+$0
+endsnippet
+
+# }}}
+# {{{ common imports
+
+snippet imU "import * as U from 'utils'"
+import * as U from 'utils'
+$0
+endsnippet
+
+# }}}
+# {{{ react
+
+snippet useMemo "useMemo(...)"
+const $1 = useMemo(() => {
+	$2
+}, $3)
+$0
+endsnippet
+
+# }}}
+# {{{ destructuring
+
+snippet cdo "const { ... } = ..."
+const { $1 } = $2
+$0
+endsnippet
+
+snippet cda "const [ ... ] = ..."
+const [ $1 ] = $2
+$0
+endsnippet
+
+snippet ldo "let { ... } = ..."
+let { $1 } = $2
+$0
+endsnippet
+
+snippet lda "let [ ... ] = ..."
+let [ $1 ] = $2
+$0
+endsnippet
+
+# }}}
