@@ -1,38 +1,157 @@
 extends typescript
 
-snippet improptypes "import prop-types"
-import PropTypes from 'prop-types'
-endsnippet
+# {{{ general
+
+# {{{ react functional component
 
 snippet rfc "react functional component"
-const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props) => {
+const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props): JSX.Element => {
 	return (
 		${3:<></>}
 	)
-}
+}$0
 endsnippet
 
-snippet ustate "use state"
-const [${1:item}, ${2:setItem}] = useState<$3>($4)
-endsnippet
+# }}}
 
-snippet dispatch "dispatch"
-dispatch(${1:action})
-endsnippet
+# }}}
+# {{{ imports and exports
 
-snippet expropTypes "export propTypes"
+# {{{ export propTypes
+
+snippet expt "export propTypes"
 export const propTypes = {
 	${1:${VISUAL}}
 }$0
 endsnippet
 
-snippet exdefaultProps "export defaultProps"
+# }}}
+# {{{ export defaultProps
+
+snippet exdp "export defaultProps"
 export const defaultProps = {
 	${1:${VISUAL}}
 }$0
 endsnippet
 
-snippet imH "import * as H from 'hooks'"
-import * as U from 'utils'
+# }}}
+# {{{ import prop-types
+
+snippet impt "import prop-types"
+import PropTypes from 'prop-types'$0
+endsnippet
+
+# }}}
+# {{{ import C from '@/components'
+
+snippet imC "import components"
+import * as C from '@/components'$0
+endsnippet
+
+# }}}
+# {{{ import OC from './components'
+
+snippet imOC "import own components"
+import * as OC from './components'$0
+endsnippet
+
+# }}}
+# {{{ import U from '@/utils'
+
+snippet imU "import utils"
+import * as U from '@/utils'$0
+endsnippet
+
+# }}}
+# {{{ import OU from './utils'
+
+snippet imOU "import own utils"
+import * as OU from './utils'$0
+endsnippet
+
+# }}}
+# {{{ import H from '@/hooks'
+
+snippet imH "import hooks"
+import * as H from '@/hooks'$0
+endsnippet
+
+# }}}
+# {{{ import OH from './hooks'
+
+snippet imOH "import own hooks"
+import * as OH from './hooks'$0
+endsnippet
+
+# }}}
+# {{{ import API from '@/api'
+
+snippet imAPI "import API"
+import * as API from '@/api'$0
+endsnippet
+
+# }}}
+# {{{ import DB from '@/db'
+
+snippet imDB "import db"
+import * as DB from '@/db'$0
+endsnippet
+
+# }}}
+
+# }}}
+# {{{ hooks
+
+# {{{ useState
+
+snippet usst "useState"
+const [${1:item}, ${2:setItem}] = useState<$3>($4)$0
+endsnippet
+
+# }}}
+# {{{ useCallback
+
+snippet usca "useCallback"
+const ${1:name} = useCallback((${2:args}): ${3:returnType} => {
+	${4}
+}, [${5:deps}])$0
+endsnippet
+
+# }}}
+# {{{ useMemo
+
+snippet usme "useMemo(...)"
+const $1 = useMemo(() => {
+	$2
+}, $3)
 $0
 endsnippet
+
+# }}}
+# {{{ useEffect
+
+snippet usef "useEffect(...)"
+const $1 = useEffect(() => {
+	$2
+}, $3)
+$0
+endsnippet
+
+# }}}
+
+# }}}
+# {{{ redux
+
+# {{{ dispatch
+
+snippet disp "dispatch"
+dispatch(${1:action})$0
+endsnippet
+
+# }}}
+
+# }}}
+# {{{ imports
+
+
+# }}}
