@@ -64,6 +64,27 @@ import _includes from 'lodash/includes'
 endsnippet
 
 # }}}
+# {{{ import _filter
+
+snippet im_fil "import _filter"
+import _filter from 'lodash/filter'
+endsnippet
+
+# }}}
+# {{{ import _subtract
+
+snippet im_sub "import _subtract"
+import _subtract from 'lodash/subtract'
+endsnippet
+
+# }}}
+# {{{ import _map
+
+snippet im_mp "import _map"
+import _map from 'lodash/map'
+endsnippet
+
+# }}}
 # {{{ import _keys
 
 snippet im_k "import _keys"
@@ -82,6 +103,13 @@ endsnippet
 
 snippet im_fl "import _flatten"
 import _flatten from 'lodash/flatten'
+endsnippet
+
+# }}}
+# {{{ import _flattenDeep
+
+snippet im_fld "import _flattenDeep"
+import _flattenDeep from 'lodash/flattenDeep'
 endsnippet
 
 # }}}
@@ -236,21 +264,42 @@ endsnippet
 # {{{ _includes
 
 snippet _in "_includes"
-const $1 = _includes($1)$0
+const $1 = _includes($2)$0
+endsnippet
+
+# }}}
+# {{{ _filter
+
+snippet _fi "_filter"
+const $1 = _filter($2)$0
+endsnippet
+
+# }}}
+# {{{ _subtract
+
+snippet _sub "_subtract"
+const $1 = _subtract($2)$0
+endsnippet
+
+# }}}
+# {{{ _map
+
+snippet _mp "_map"
+const $1 = _map($2)$0
 endsnippet
 
 # }}}
 # {{{ _keys
 
 snippet _k "_keys"
-const $1 = _keys($1)$0
+const $1 = _keys($2)$0
 endsnippet
 
 # }}}
 # {{{ _values
 
 snippet _v "_values"
-const $1 = _values($1)$0
+const $1 = _values($2)$0
 endsnippet
 
 # }}}
@@ -258,6 +307,13 @@ endsnippet
 
 snippet _fl "_flatten"
 const $1 = _flatten($2)$0
+endsnippet
+
+# }}}
+# {{{ _flattenDeep
+
+snippet _fld "_flattenDeep"
+const $1 = _flattenDeep($2)$0
 endsnippet
 
 # }}}
