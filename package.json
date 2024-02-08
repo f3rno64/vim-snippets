@@ -1,0 +1,48 @@
+{
+  "name": "@f3rno64/vim-snippets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal ultisnips collection",
+  "author": "Cris Mihalache <f3rno64@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f3rno64/vim-snippets/issues"
+  },
+  "homepage": "https://github.com/f3rno64/vim-snippets#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "pnpm lint:markdownlint",
+    "lint:fix": "pnpm lint:markdownlint:fix",
+    "lint:markdownlint": "markdownlint README.md",
+    "lint:markdownlint:fix": "markdownlint --fix README.md",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f3rno64/vim-snippets.git"
+  },
+  "keywords": [
+    "vim",
+    "neovim",
+    "nvim",
+    "ultisnips",
+    "snippets",
+    "markdown",
+    "typescript",
+    "react",
+    "lodash",
+    "mocha",
+    "tsx"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "@commitlint/format": "^18.6.0",
+    "@commitlint/types": "^18.6.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
+    "markdownlint-cli": "^0.39.0",
+    "remark": "^15.0.1"
+  }
+}
