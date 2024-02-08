@@ -13,9 +13,29 @@ const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props): JSX.Element => {
 endsnippet
 
 # }}}
+# {{{ className=
+
+snippet cn= "className="
+className="${1:classnames}"$0
+endsnippet
 
 # }}}
-# {{{ imports and exports
+# {{{ className={classNames(...)}
+
+snippet cn=cN "className={classNames(...)}"
+className={classNames(${1:classes})}$0
+endsnippet
+
+# }}}
+# {{{ className={cn(...)}
+
+snippet cn=cn "className={cn(...)}"
+className={cn(${1:classes})}$0
+endsnippet
+
+# }}}
+
+# {{{ exports
 
 # {{{ export propTypes
 
@@ -35,66 +55,98 @@ export const defaultProps = {
 endsnippet
 
 # }}}
+
+# }}}
+# {{{ imports
+
+# {{{ import classNames
+
+snippet imcN "import classNames from 'classnames'"
+import classNames from 'classnames'$0
+endsnippet
+
+# }}}
+# {{{ import clsx
+
+snippet imcn "import cn from 'clsx'"
+import cn from 'clsx'$0
+endsnippet
+
+# }}}
+# {{{ import React
+
+snippet imr "import React from 'react'"
+import React from 'react'$0
+endsnippet
+
+# }}}
+# {{{ import React, { ... }
+
+snippet imr "import React, { ... } from 'react'"
+import React, { ${1:extraImports} } from 'react'$0
+endsnippet
+
+# }}}
 # {{{ import prop-types
 
-snippet impt "import prop-types"
+snippet impt "import 'prop-types'"
 import PropTypes from 'prop-types'$0
-endsnippet
-
-# }}}
-# {{{ import C from '@/components'
-
-snippet imC "import components"
-import * as C from '@/components'$0
-endsnippet
-
-# }}}
-# {{{ import OC from './components'
-
-snippet imOC "import own components"
-import * as OC from './components'$0
-endsnippet
-
-# }}}
-# {{{ import U from '@/utils'
-
-snippet imU "import utils"
-import * as U from '@/utils'$0
 endsnippet
 
 # }}}
 # {{{ import OU from './utils'
 
-snippet imOU "import own utils"
+snippet imOU "import * as OU from './utils'"
 import * as OU from './utils'$0
-endsnippet
-
-# }}}
-# {{{ import H from '@/hooks'
-
-snippet imH "import hooks"
-import * as H from '@/hooks'$0
 endsnippet
 
 # }}}
 # {{{ import OH from './hooks'
 
-snippet imOH "import own hooks"
+snippet imOH "import * as OH from './hooks'"
 import * as OH from './hooks'$0
 endsnippet
 
 # }}}
-# {{{ import API from '@/api'
+# {{{ import OC from './components'
 
-snippet imAPI "import API"
-import * as API from '@/api'$0
+snippet imOC "import * as OC from './components'"
+import * as OC from './components'$0
 endsnippet
 
 # }}}
 # {{{ import DB from '@/db'
 
-snippet imDB "import db"
+snippet imDB "import * as DB from '@/db'"
 import * as DB from '@/db'$0
+endsnippet
+
+# }}}
+# {{{ import API from '@/api'
+
+snippet imAPI "import * as API from '@/api'"
+import * as API from '@/api'$0
+endsnippet
+
+# }}}
+# {{{ import U from '@/utils'
+
+snippet imU "import * as U from '@/utils'"
+import * as U from '@/utils'$0
+endsnippet
+
+# }}}
+# {{{ import H from '@/hooks'
+
+snippet imH "import * as H from '@/hooks'"
+import * as H from '@/hooks'$0
+endsnippet
+
+# }}}
+# {{{ import C from '@/components'
+
+snippet imC "import * as C from '@/components'"
+import * as C from '@/components'$0
 endsnippet
 
 # }}}
@@ -102,10 +154,52 @@ endsnippet
 # }}}
 # {{{ hooks
 
+# {{{ useId
+
+snippet usid "useId"
+const	${1:name} = useId()$0
+endsnippet
+
+# }}}
+# {{{ useRef
+
+snippet usrf "useRef"
+const	${1:name} = useRef(${2:initialValue})$0
+endsnippet
+
+# }}}
+# {{{ useContext
+
+snippet usct "useContext"
+const	${1:name} = useContext(${2:context})$0
+endsnippet
+
+# }}}
+# {{{ useReducer
+
+snippet usrd "useReducer"
+const	[${1:state}, dispatch] = useReducer(${2:reducer}, ${3:initialArg}, ${4:init})$0
+endsnippet
+
+# }}}
+# {{{ useDebugValue
+
+snippet usdb "useDebugValue"
+useDebugValue(${1:value}, ${2:format})$0
+endsnippet
+
+# }}}
+# {{{ useTransition
+
+snippet ustr "useTransition"
+const [${1:isPending}, ${2:startTransition}] = useTransition()$0
+endsnippet
+
+# }}}
 # {{{ useState
 
 snippet usst "useState"
-const [${1:item}, ${2:setItem}] = useState<$3>($4)$0
+const [${1:item}, ${2:setItem}] = useState<${3:type}>(${4:initialValue})$0
 endsnippet
 
 # }}}
@@ -113,7 +207,7 @@ endsnippet
 
 snippet usca "useCallback"
 const ${1:name} = useCallback((${2:args}): ${3:returnType} => {
-	${4}
+	${4:${VISUAL}}
 }, [${5:deps}])$0
 endsnippet
 
@@ -121,9 +215,9 @@ endsnippet
 # {{{ useMemo
 
 snippet usme "useMemo(...)"
-const $1 = useMemo(() => {
-	$2
-}, $3)
+const ${1:name} = useMemo((): ${2:returnType} => {
+	${3:${VISUAL}}
+}, [${4:deps}])
 $0
 endsnippet
 
@@ -131,9 +225,9 @@ endsnippet
 # {{{ useEffect
 
 snippet usef "useEffect(...)"
-const $1 = useEffect(() => {
-	$2
-}, $3)
+const ${1:name} = useEffect((): void => {
+	${2:${VISUAL}}
+}, [${3:deps}])
 $0
 endsnippet
 
@@ -149,9 +243,5 @@ dispatch(${1:action})$0
 endsnippet
 
 # }}}
-
-# }}}
-# {{{ imports
-
 
 # }}}
