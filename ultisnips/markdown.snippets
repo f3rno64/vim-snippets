@@ -1,0 +1,182 @@
+# {{{ image
+
+snippet img "![alt](url)"
+![${1:${VISUAL:alt}}](${2:url})$0
+endsnippet
+
+# }}}
+# {{{ image link
+
+snippet imglk "[![alt](image-url)](link-url)"
+[![${1:${VISUAL:alt}}](${2:image-url})](${3:link-url})$0
+endsnippet
+
+# }}}
+# {{{ image link-variable
+
+snippet imglkv "[![alt](image-url)][link-url-id]"
+[![${1:${VISUAL:alt}}](${2:image-url})][${3:link-url-id}]$0
+endsnippet
+
+# }}}
+# {{{ link variable
+
+snippet lkv "[id]: url"
+[${1:${VISUAL:id}}]: ${2:url}$0
+endsnippet
+
+# }}}
+# {{{ link
+
+snippet lk "[label](url)"
+[${1:${VISUAL:label}}](${2:url})$0
+endsnippet
+
+# }}}
+# {{{ bold link
+
+snippet lkb "[**`label`**](url)"
+[**`${1:${VISUAL:label}}`**](${2:url})$0
+endsnippet
+
+# }}}
+# {{{ bold link-variable
+
+snippet lkb "[**`label`**][url-id]"
+[**`${1:${VISUAL:label}}`**][${2:url-id}]$0
+endsnippet
+
+# }}}
+# {{{ bold code
+
+snippet boc "**`text`**"
+**`${1:text}`**$0
+endsnippet
+
+# }}}
+# {{{ bold
+
+snippet bo "**text**"
+**${1:text}**$0
+endsnippet
+
+# }}}
+# {{{ italic link
+
+snippet lki "[*`label`*](url)"
+[*`${1:${VISUAL:label}}`*](${2:url})$0
+endsnippet
+
+# }}}
+# {{{ italic link-variable
+
+snippet lki "[*`label`*][url-id]"
+[*`${1:${VISUAL:label}}`*][${2:url-id}]$0
+endsnippet
+
+# }}}
+# {{{ italic code
+
+snippet itc code "*`text`*"
+*`${1:text}`*$0
+endsnippet
+
+# }}}
+# {{{ italic
+
+snippet it "*text*"
+*${1:text}*$0
+endsnippet
+
+# }}}
+# {{{ code
+
+snippet co "`text`"
+`${1:text}`$0
+endsnippet
+
+# }}}
+# {{{ h1
+
+snipppet h1 "# header"
+# ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ h2
+
+snipppet h2 "## header"
+## ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ h3
+
+snipppet h3 "## header"
+### ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ h4
+
+snipppet h4 "#### header"
+#### ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ h5
+
+snipppet h5 "##### header"
+##### ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ h6
+
+snipppet h6 "###### header"
+###### ${1:header}
+$0
+endsnippet
+
+# }}}
+# {{{ code
+
+snipppet code "```language"
+```${1:language}
+$0
+```
+endsnippet
+
+# }}}
+# {{{ code js
+
+snipppet code "```js"
+```js
+$1
+```
+endsnippet
+
+# }}}
+# {{{ code bash
+
+snipppet code "```bash"
+```bash
+$1
+```
+endsnippet
+
+# }}}
+# {{{ code json
+
+snipppet code "```json"
+```json
+$1
+```
+endsnippet
+
+# }}}
