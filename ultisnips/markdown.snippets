@@ -1,179 +1,332 @@
-# {{{ image
+# {{{ reference link (rlk)
+
+snippet rlk "[id]: content 'title'"
+[${1:${VISUAL:id}}]: ${2:content} '${3:title}'$0
+endsnippet
+
+# }}}
+# {{{ block quote (bq)
+
+snippet bq "> text"
+> ${1:text}$0
+endsnippet
+
+# }}}
+# {{{ url (url)
+
+snippet url "<url>"
+<${1:url}>$0
+endsnippet
+
+# }}}
+# {{{ email (email)
+
+snippet email "<email>"
+<${1:email}>$0
+endsnippet
+
+# }}}
+
+# {{{ unordered list item (ol)
+
+snippet ol "- label -- description"
+- ${1:label} -- ${2:description}$0
+endsnippet
+
+# }}}
+# {{{ italic unordered list item (oli)
+
+snippet oli "- *label* -- description"
+- *${1:label}* -- ${2:description}$0
+endsnippet
+
+# }}}
+# {{{ bold unordered list item (olb)
+
+snippet olb "- **label** -- description"
+- **${1:label}** -- ${2:description}$0
+endsnippet
+
+# }}}
+# {{{ bold italic unordered list item (olbi)
+
+snippet olbi "- _**label**_ -- description"
+- _**${1:label}**_ -- ${2:description}$0
+endsnippet
+
+# }}}
+
+# {{{ image (img)
 
 snippet img "![alt](url)"
 ![${1:${VISUAL:alt}}](${2:url})$0
 endsnippet
 
 # }}}
-# {{{ image link
+# {{{ image url-var (imgv)
+
+snippet imgv "![alt][url-var]"
+![${1:${VISUAL:alt}}][${2:url-var}]$0
+endsnippet
+
+# }}}
+# {{{ image link (imglk)
 
 snippet imglk "[![alt](image-url)](link-url)"
 [![${1:${VISUAL:alt}}](${2:image-url})](${3:link-url})$0
 endsnippet
 
 # }}}
-# {{{ image link-variable
+# {{{ image link image-var link-var (imgvlkv)
 
-snippet imglkv "[![alt](image-url)][link-url-id]"
-[![${1:${VISUAL:alt}}](${2:image-url})][${3:link-url-id}]$0
+snippet imkvlv "[![alt][image-var]][link-var]"
+[![${1:${VISUAL:alt}}][${2:image-var}]][${3:link-var}]$0
 endsnippet
 
 # }}}
-# {{{ link variable
 
-snippet lkv "[id]: url"
-[${1:${VISUAL:id}}]: ${2:url}$0
+# {{{ link (lk)
+
+snippet lk "[label](url tooltip)"
+[${1:${VISUAL:label}}](${2:url} ${3:tooltip})$0
 endsnippet
 
 # }}}
-# {{{ link
+# {{{ link url-var (lkv)
 
-snippet lk "[label](url)"
-[${1:${VISUAL:label}}](${2:url})$0
+snippet lkv "[label][url-var]"
+[${1:${VISUAL:label}}][${2:url-var}]$0
 endsnippet
 
 # }}}
-# {{{ bold link
+# {{{ link code (lkc)
 
-snippet lkb "[**`label`**](url)"
-[**`${1:${VISUAL:label}}`**](${2:url})$0
+snippet lkc "[`label`](url tooltip)"
+[`${1:${VISUAL:label}}`](${2:url} ${3:tooltip})$0
 endsnippet
 
 # }}}
-# {{{ bold link-variable
+# {{{ link code url-var (lkcv)
 
-snippet lkb "[**`label`**][url-id]"
-[**`${1:${VISUAL:label}}`**][${2:url-id}]$0
+snippet lkcv "[`label`][url-var]"
+[`${1:${VISUAL:label}}`][${2:url-var}]$0
 endsnippet
 
 # }}}
-# {{{ bold code
+# {{{ link italic (lki)
 
-snippet boc "**`text`**"
-**`${1:text}`**$0
+snippet lki "*[label](url tooltip)*"
+*[${1:${VISUAL:label}}](${2:url} ${3:tooltip})*$0
 endsnippet
 
 # }}}
-# {{{ bold
+# {{{ link italic url-var (lkiv)
 
-snippet bo "**text**"
-**${1:text}**$0
+snippet lkiv "*[label][url-var]*"
+*[${1:${VISUAL:label}}][${2:url-var}]*$0
 endsnippet
 
 # }}}
-# {{{ italic link
+# {{{ link italic code (lkic)
 
-snippet lki "[*`label`*](url)"
-[*`${1:${VISUAL:label}}`*](${2:url})$0
+snippet lkic "*[`label`](url tooltip)*"
+*[`${1:${VISUAL:label}}`](${2:url} ${3:tooltip})*$0
 endsnippet
 
 # }}}
-# {{{ italic link-variable
+# {{{ link italic code url-var (lkicv)
 
-snippet lki "[*`label`*][url-id]"
-[*`${1:${VISUAL:label}}`*][${2:url-id}]$0
+snippet lkicv "*[`label`][url-var]*"
+*[`${1:${VISUAL:label}}`][${2:url-var}]*$0
 endsnippet
 
 # }}}
-# {{{ italic code
+# {{{ link bold (lkb)
 
-snippet itc code "*`text`*"
-*`${1:text}`*$0
+snippet lkb "**[label](url tooltip)**"
+**[${1:${VISUAL:label}}](${2:url} ${3:tooltip})**$0
 endsnippet
 
 # }}}
-# {{{ italic
+# {{{ link bold url-var (lkbv)
 
-snippet it "*text*"
-*${1:text}*$0
+snippet lkbv "**[label][url-var]**"
+**[${1:${VISUAL:label}}][${2:url-var}]**$0
 endsnippet
 
 # }}}
-# {{{ code
+# {{{ link bold code (lkbc)
+
+snippet lkbc "**[`label`](url tooltip)**"
+**[`${1:${VISUAL:label}}`](${2:url} ${3:tooltip})**$0
+endsnippet
+
+# }}}
+# {{{ link bold code url-var (lkbcv)
+
+snippet lkbcv "**[`label`][url-var]**"
+**[`${1:${VISUAL:label}}`][${2:url-var}]**$0
+endsnippet
+
+# }}}
+# {{{ link bold italic (lkbi)
+
+snippet lkbi "_**[label](url tooltip)**_"
+_**[${1:${VISUAL:label}}](${2:url} ${3:tooltip})**_$0
+endsnippet
+
+# }}}
+# {{{ link bold italic url-var (lkbiv)
+
+snippet lkbiv "_**[label][url-var]**_"
+_**[${1:${VISUAL:label}}][${2:url-var}]**_$0
+endsnippet
+
+# }}}
+# {{{ link bold italic code (lkbic)
+
+snippet lkbic "_**[`label`](url tooltip)**_"
+_**[`${1:${VISUAL:label}}`](${2:url} ${3:tooltip})**_$0
+endsnippet
+
+# }}}
+# {{{ link bold italic code url-var (lkbicv)
+
+snippet lkbicv "_**[`label`][url-var]**_"
+_**[`${1:${VISUAL:label}}`[${2:url-var}]**_$0
+endsnippet
+
+# }}}
+
+# {{{ code (co)
 
 snippet co "`text`"
 `${1:text}`$0
 endsnippet
 
 # }}}
-# {{{ h1
+# {{{ italic (it)
 
-snipppet h1 "# header"
+snippet it "*text*"
+*${1:text}*$0
+endsnippet
+
+# }}}
+# {{{ italic code (itc)
+
+snippet itc "*`text`*"
+*`${1:text}`*$0
+endsnippet
+
+# }}}
+# {{{ bold (bo)
+
+snippet bo "**text**"
+**${1:text}**$0
+endsnippet
+
+# }}}
+# {{{ bold code (boc)
+
+snippet boc "**`text`**"
+**`${1:text}`**$0
+endsnippet
+
+# }}}
+# {{{ bold italic (boi)
+
+snippet boi "***text***"
+***${1:text}***$0
+endsnippet
+
+# }}}
+# {{{ bold italic code (boic)
+
+snippet boic "***`text`***"
+***`${1:text}`***$0
+endsnippet
+
+# }}}
+
+# {{{ h1 (h1)
+
+snippet h1 "# header"
 # ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ h2
+# {{{ h2 (h2)
 
-snipppet h2 "## header"
+snippet h2 "## header"
 ## ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ h3
+# {{{ h3 (h3)
 
-snipppet h3 "## header"
+snippet h3 "### header"
 ### ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ h4
+# {{{ h4 (h4)
 
-snipppet h4 "#### header"
+snippet h4 "#### header"
 #### ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ h5
+# {{{ h5 (h5)
 
-snipppet h5 "##### header"
+snippet h5 "##### header"
 ##### ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ h6
+# {{{ h6 (h6)
 
-snipppet h6 "###### header"
+snippet h6 "###### header"
 ###### ${1:header}
 $0
 endsnippet
 
 # }}}
-# {{{ code
 
-snipppet code "```language"
+# {{{ code block (cob)
+
+snippet cob "```language...```"
 ```${1:language}
 $0
 ```
 endsnippet
 
 # }}}
-# {{{ code js
+# {{{ code block js (cobjs)
 
-snipppet code "```js"
+snippet cobjs "```js...```"
 ```js
 $1
 ```
 endsnippet
 
 # }}}
-# {{{ code bash
+# {{{ code block bash (cobbash)
 
-snipppet code "```bash"
+snippet cobbash "```bash...```"
 ```bash
 $1
 ```
 endsnippet
 
 # }}}
-# {{{ code json
+# {{{ code block json (cobjson)
 
-snipppet code "```json"
+snippet cobjson "```json...```"
 ```json
 $1
 ```
