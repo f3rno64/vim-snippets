@@ -2,7 +2,7 @@ extends typescript
 
 # {{{ general
 
-# {{{ react functional component
+# {{{ react functional component (rfc)
 
 snippet rfc "react functional component"
 const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props): JSX.Element => {
@@ -13,31 +13,1201 @@ const ${1:name}: React.FC<${2:T.$1Props}> = (props: T.$1Props): JSX.Element => {
 endsnippet
 
 # }}}
-# {{{ className=
+
+# }}}
+# {{{ prop setters
+
+# NOTE: Gently enumerated from the @types/react DomAttributes interface
+
+# {{{ key= (k=)
+
+snippet k= "key="
+key="${1:key}"$0
+endsnippet
+
+# }}}
+# {{{ value= (v=)
+
+snippet v= "value="
+value="${1:value}"$0
+endsnippet
+
+# }}}
+# {{{ className= (cn=)
 
 snippet cn= "className="
 className="${1:classnames}"$0
 endsnippet
 
 # }}}
-# {{{ className={classNames(...)}
-
-snippet cn=cN "className={classNames(...)}"
-className={classNames(${1:classes})}$0
-endsnippet
-
-# }}}
-# {{{ className={cn(...)}
+# {{{ className={cn(...)} (cn=cn)
 
 snippet cn=cn "className={cn(...)}"
 className={cn(${1:classes})}$0
 endsnippet
 
 # }}}
+# {{{ className={classNames(...)} (cn=cN)
 
+snippet cn=cN "className={classNames(...)}"
+className={classNames(${1:classes})}$0
+endsnippet
+
+# }}}
+
+# {{{ onCopy={...} (oncp=)
+
+snippet oncp= "onCopy={...}"
+onCopy={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCopyCapture={...} (oncpc=)
+
+snippet oncpc= "onCopyCapture={...}"
+onCopyCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCut={...} (oncut=)
+
+snippet oncut= "onCut={...}"
+onCut={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCutCapture={...} (oncutc=)
+
+snippet oncutc= "onCutCapture={...}"
+onCutCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPaste={...} (onpst=)
+
+snippet onpst= "onPaste={...}"
+onPaste={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPasteCapture={...} (onpstc=)
+
+snippet onpstc= "onPasteCapture={...}"
+onPasteCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onCompositionEnd={...} (oncompen=)
+
+snippet oncompen= "onCompositionEnd={...}"
+onCompositionEnd={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCompositionEndCapture={...} (oncompenc=)
+
+snippet oncompenc= "onCompositionEndCapture={...}"
+onCompositionEndCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCompositionStart={...} (oncompst=)
+
+snippet oncompst= "onCompositionStart={...}"
+onCompositionStart={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCompositionStartCapture={...} (oncompstc=)
+
+snippet oncompstc= "onCompositionStartCapture={...}"
+onCompositionStartCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCompositionUpdate={...} (oncompup=)
+
+snippet oncompup= "onCompositionUpdate={...}"
+onCompositionUpdate={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCompositionUpdateCapture={...} (oncompupc=)
+
+snippet oncompupc= "onCompositionUpdateCapture={...}"
+onCompositionUpdateCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onFocus={...} (onfo=)
+
+snippet onfo= "onFocus={...}"
+onFocus={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onFocusCapture={...} (onfoc=)
+
+snippet onfoc= "onFocusCapture={...}"
+onFocusCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onBlur={...} (onbl=)
+
+snippet onbl= "onBlur={...}"
+onBlur={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onBlurCapture={...} (onblc=)
+
+snippet onblc= "onBlurCapture={...}"
+onBlurCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onChange={...} (oncg=)
+
+snippet oncg= "onChange={...}"
+onChange={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onChangeCapture={...} (oncgc=)
+
+snippet oncgc= "onChangeCapture={...}"
+onChangeCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onBeforeInput={...} (onbfin=)
+
+snippet onbfin= "onBeforeInput={...}"
+onBeforeInput={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onBeforeInputCapture={...} (onbfinc=)
+
+snippet onbfinc= "onBeforeInputCapture={...}"
+onBeforeInputCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onInput={...} (onin=)
+
+snippet onin= "onInput={...}"
+onInput={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onInputCapture={...} (oninc=)
+
+snippet oninc= "onInputCapture={...}"
+onInputCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onReset={...} (onres=)
+
+snippet onres= "onReset={...}"
+onReset={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onResetCapture={...} (onresc=)
+
+snippet onresc= "onResetCapture={...}"
+onResetCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSubmit={...} (onsub=)
+
+snippet onsub= "onSubmit={...}"
+onSubmit={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSubmitCapture={...} (onsubc=)
+
+snippet onsubc= "onSubmitCapture={...}"
+onSubmitCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onInvalid={...} (oninv=)
+
+snippet oninv= "onInvalid={...}"
+onInvalid={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onInvalidCapture={...} (oninvc=)
+
+snippet oninvc= "onInvalidCapture={...}"
+onInvalidCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onLoad={...} (onld=)
+
+snippet onld= "onLoad={...}"
+onLoad={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadCapture={...} (onldc=)
+
+snippet onldc= "onLoadCapture={...}"
+onLoadCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onError={...} (onerr=)
+
+snippet onerr= "onError={...}"
+onError={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onErrorCapture={...} (onerrc=)
+
+snippet onerrc= "onErrorCapture={...}"
+onErrorCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onKeyDown={...} (onkd=)
+
+snippet onkd= "onKeyDown={...}"
+onKeyDown={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onKeyDownCapture={...} (onkdc=)
+
+snippet onkdc= "onKeyDownCapture={...}"
+onKeyDownCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onKeyPress={...} (onkp=)
+
+snippet onkp= "onKeyPress={...}"
+onKeyPress={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onKeyPressCapture={...} (onkpc=)
+
+snippet onkpc= "onKeyPressCapture={...}"
+onKeyPressCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onKeyUp={...} (onku=)
+
+snippet onku= "onKeyUp={...}"
+onKeyUp={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onKeyUpCapture={...} (onkuc=)
+
+snippet onkuc= "onKeyUpCapture={...}"
+onKeyUpCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onAbort={...} (onab=)
+
+snippet onab= "onAbort={...}"
+onAbort={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAbortCapture={...} (onabc=)
+
+snippet onabc= "onAbortCapture={...}"
+onAbortCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCanPlay={...} (oncpl=)
+
+snippet oncpl= "onCanPlay={...}"
+onCanPlay={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCanPlayCapture={...} (oncplc=)
+
+snippet oncplc= "onCanPlayCapture={...}"
+onCanPlayCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCanPlayThrough={...} (oncplt=)
+
+snippet oncplt= "onCanPlayThrough={...}"
+onCanPlayThrough={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onCanPlayThroughCapture={...} (oncpltc=)
+
+snippet oncpltc= "onCanPlayThroughCapture={...}"
+onCanPlayThroughCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDurationChange={...} (onducg=)
+
+snippet onducg= "onDurationChange={...}"
+onDurationChange={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDurationChangeCapture={...} (onducgc=)
+
+snippet onducgc= "onDurationChangeCapture={...}"
+onDurationChangeCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEmptied={...} (onemtd=)
+
+snippet onemtd= "onEmptied={...}"
+onEmptied={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEmptiedCapture={...} (onemtdc=)
+
+snippet onemtdc= "onEmptiedCapture={...}"
+onEmptiedCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEncrypted={...} (onencr=)
+
+snippet onencr= "onEncrypted={...}"
+onEncrypted={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEncryptedCapture={...} (onencrc=)
+
+snippet onencrc= "onEncryptedCapture={...}"
+onEncryptedCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEnded={...} (onendd=)
+
+snippet onendd= "onEnded={...}"
+onEnded={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onEndedCapture={...} (onenddc=)
+
+snippet onenddc= "onEndedCapture={...}"
+onEndedCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadedData={...} (onlda=)
+
+snippet onlda= "onLoadedData={...}"
+onLoadedData={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadedDataCapture={...} (onldac=)
+
+snippet onldac= "onLoadedDataCapture={...}"
+onLoadedDataCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadedMetadata={...} (onldmtd=)
+
+snippet onldmtd= "onLoadedMetadata={...}"
+onLoadedMetadata={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadedMetadataCapture={...} (onldmtdc=)
+
+snippet onldmtdc= "onLoadedMetadataCapture={...}"
+onLoadedMetadataCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadStart={...} (onldst=)
+
+snippet onldst= "onLoadStart={...}"
+onLoadStart={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLoadStartCapture={...} (onldstc=)
+
+snippet onldstc= "onLoadStartCapture={...}"
+onLoadStartCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPause={...} (onpau=)
+
+snippet onpau= "onPause={...}"
+onPause={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPauseCapture={...} (onpauc=)
+
+snippet onpauc= "onPauseCapture={...}"
+onPauseCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPlay={...} (onpl=)
+
+snippet onpl= "onPlay={...}"
+onPlay={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPlayCapture={...} (onplc=)
+
+snippet onplc= "onPlayCapture={...}"
+onPlayCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPlaying={...} (onplg=)
+
+snippet onplg= "onPlaying={...}"
+onPlaying={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPlayingCapture={...} (onplgc=)
+
+snippet onplgc= "onPlayingCapture={...}"
+onPlayingCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onProgress={...} (onprg=)
+
+snippet onprg= "onProgress={...}"
+onProgress={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onProgressCapture={...} (onprgc=)
+
+snippet onprgc= "onProgressCapture={...}"
+onProgressCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onRateChange={...} (onrtcg=)
+
+snippet onrtcg= "onRateChange={...}"
+onRateChange={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onRateChangeCapture={...} (onrtcgc=)
+
+snippet onrtcgc= "onRateChangeCapture={...}"
+onRateChangeCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onResize={...} (onresi=)
+
+snippet onresi= "onResize={...}"
+onResize={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onResizeCapture={...} (onresic=)
+
+snippet onresic= "onResizeCapture={...}"
+onResizeCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSeeked={...} (onskd=)
+
+snippet onskd= "onSeeked={...}"
+onSeeked={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSeekedCapture={...} (onskdc=)
+
+snippet onskdc= "onSeekedCapture={...}"
+onSeekedCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSeeking={...} (onskg=)
+
+snippet onskg= "onSeeking={...}"
+onSeeking={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSeekingCapture={...} (onskgc=)
+
+snippet onskgc= "onSeekingCapture={...}"
+onSeekingCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onStalled={...} (onstal=)
+
+snippet onstal= "onStalled={...}"
+onStalled={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onStalledCapture={...} (onstalc=)
+
+snippet onstalc= "onStalledCapture={...}"
+onStalledCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSuspend={...} (onsusp=)
+
+snippet onsusp= "onSuspend={...}"
+onSuspend={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSuspendCapture={...} (onsuspc=)
+
+snippet onsuspc= "onSuspendCapture={...}"
+onSuspendCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTimeUpdate={...} (ontu=)
+
+snippet ontu= "onTimeUpdate={...}"
+onTimeUpdate={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTimeUpdateCapture={...} (ontuc=)
+
+snippet ontuc= "onTimeUpdateCapture={...}"
+onTimeUpdateCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onVolumeChange={...} (onvolc=)
+
+snippet onvolc= "onVolumeChange={...}"
+onVolumeChange={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onVolumeChangeCapture={...} (onvolcc=)
+
+snippet onvolcc= "onVolumeChangeCapture={...}"
+onVolumeChangeCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onWaiting={...} (onwt=)
+
+snippet onwt= "onWaiting={...}"
+onWaiting={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onWaitingCapture={...} (onwtc=)
+
+snippet onwtc= "onWaitingCapture={...}"
+onWaitingCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onAuxClick={...} (onauxc=)
+
+snippet onauxc= "onAuxClick={...}"
+onAuxClick={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAuxClickCapture={...} (onauxcc=)
+
+snippet onauxcc= "onAuxClickCapture={...}"
+onAuxClickCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onClick={...} (onclk=)
+
+snippet onclk= "onClick={...}"
+onClick={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onClickCapture={...} (onclkc=)
+
+snippet onclkc= "onClickCapture={...}"
+onClickCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onContextMenu={...} (onctxm=)
+
+snippet onctxm= "onContextMenu={...}"
+onContextMenu={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onContextMenuCapture={...} (onctxmc=)
+
+snippet onctxmc= "onContextMenuCapture={...}"
+onContextMenuCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDoubleClick={...} (ondbclk=)
+
+snippet ondbclk= "onDoubleClick={...}"
+onDoubleClick={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDoubleClickCapture={...} (ondbclkc=)
+
+snippet ondbclkc= "onDoubleClickCapture={...}"
+onDoubleClickCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDrag={...} (ondrg=)
+
+snippet ondrg= "onDrag={...}"
+onDrag={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragCapture={...} (ondrgc=)
+
+snippet ondrgc= "onDragCapture={...}"
+onDragCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragEnd={...} (ondrge=)
+
+snippet ondrge= "onDragEnd={...}"
+onDragEnd={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragEndCapture={...} (ondrgec=)
+
+snippet ondrgec= "onDragEndCapture={...}"
+onDragEndCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragEnter={...} (ondrgent=)
+
+snippet ondrgent= "onDragEnter={...}"
+onDragEnter={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragEnterCapture={...} (ondrgentc=)
+
+snippet ondrgentc= "onDragEnterCapture={...}"
+onDragEnterCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragExit={...} (ondrex=)
+
+snippet ondrex= "onDragExit={...}"
+onDragExit={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragExitCapture={...} (ondrexc=)
+
+snippet ondrexc= "onDragExitCapture={...}"
+onDragExitCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragLeave={...} (ondrlv=)
+
+snippet ondrlv= "onDragLeave={...}"
+onDragLeave={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragLeaveCapture={...} (ondrlvc=)
+
+snippet ondrlvc= "onDragLeaveCapture={...}"
+onDragLeaveCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragOver={...} (ondrgov=)
+
+snippet ondrgov= "onDragOver={...}"
+onDragOver={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragOverCapture={...} (ondrgovc=)
+
+snippet ondrgovc= "onDragOverCapture={...}"
+onDragOverCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragStart={...} (ondrgst=)
+
+snippet ondrgst= "onDragStart={...}"
+onDragStart={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDragStartCapture={...} (ondrgstc=)
+
+snippet ondrgstc= "onDragStartCapture={...}"
+onDragStartCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDrop={...} (ondrp=)
+
+snippet ondrp= "onDrop={...}"
+onDrop={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onDropCapture={...} (ondrpc=)
+
+snippet ondrpc= "onDropCapture={...}"
+onDropCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseDown={...} (onmdn=)
+
+snippet onmdn= "onMouseDown={...}"
+onMouseDown={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseDownCapture={...} (onmdnc=)
+
+snippet onmdnc= "onMouseDownCapture={...}"
+onMouseDownCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseEnter={...} (onme=)
+
+snippet onme= "onMouseEnter={...}"
+onMouseEnter={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseLeave={...} (onml=)
+
+snippet onml= "onMouseLeave={...}"
+onMouseLeave={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseMove={...} (onmm=)
+
+snippet onmm= "onMouseMove={...}"
+onMouseMove={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseMoveCapture={...} (onmmc=)
+
+snippet onmmc= "onMouseMoveCapture={...}"
+onMouseMoveCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseOut={...} (onmo=)
+
+snippet onmo= "onMouseOut={...}"
+onMouseOut={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseOutCapture={...} (onmoc=)
+
+snippet onmoc= "onMouseOutCapture={...}"
+onMouseOutCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseOver={...} (onmov=)
+
+snippet onmov= "onMouseOver={...}"
+onMouseOver={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseOverCapture={...} (onmovc=)
+
+snippet onmovc= "onMouseOverCapture={...}"
+onMouseOverCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseUp={...} (onmoup=)
+
+snippet onmoup= "onMouseUp={...}"
+onMouseUp={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onMouseUpCapture={...} (onmoupc=)
+
+snippet onmoupc= "onMouseUpCapture={...}"
+onMouseUpCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onSelect={...} (onsel=)
+
+snippet onsel= "onSelect={...}"
+onSelect={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onSelectCapture={...} (onselc=)
+
+snippet onselc= "onSelectCapture={...}"
+onSelectCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onTouchCancel={...} (ontcl=)
+
+snippet ontcl= "onTouchCancel={...}"
+onTouchCancel={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchCancelCapture={...} (ontclc=)
+
+snippet ontclc= "onTouchCancelCapture={...}"
+onTouchCancelCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchEnd={...} (onten=)
+
+snippet onten= "onTouchEnd={...}"
+onTouchEnd={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchEndCapture={...} (ontenc=)
+
+snippet ontenc= "onTouchEndCapture={...}"
+onTouchEndCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchMove={...} (ontmv=)
+
+snippet ontmv= "onTouchMove={...}"
+onTouchMove={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchMoveCapture={...} (ontmvc=)
+
+snippet ontmvc= "onTouchMoveCapture={...}"
+onTouchMoveCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchStart={...} (ontst=)
+
+snippet ontst= "onTouchStart={...}"
+onTouchStart={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTouchStartCapture={...} (ontstc=)
+
+snippet ontstc= "onTouchStartCapture={...}"
+onTouchStartCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onPointerDown={...} (onptdn=)
+
+snippet onptdn= "onPointerDown={...}"
+onPointerDown={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerDownCapture={...} (onptdnc=)
+
+snippet onptdnc= "onPointerDownCapture={...}"
+onPointerDownCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerMove={...} (onptmv=)
+
+snippet onptmv= "onPointerMove={...}"
+onPointerMove={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerMoveCapture={...} (onptmvc=)
+
+snippet onptmvc= "onPointerMoveCapture={...}"
+onPointerMoveCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerUp={...} (onptup=)
+
+snippet onptup= "onPointerUp={...}"
+onPointerUp={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerUpCapture={...} (onptupc=)
+
+snippet onptupc= "onPointerUpCapture={...}"
+onPointerUpCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerCancel={...} (onptc=)
+
+snippet onptc= "onPointerCancel={...}"
+onPointerCancel={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerCancelCapture={...} (onptcc=)
+
+snippet onptcc= "onPointerCancelCapture={...}"
+onPointerCancelCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerEnter={...} (onpten=)
+
+snippet onpten= "onPointerEnter={...}"
+onPointerEnter={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerEnterCapture={...} (onptenc=)
+
+snippet onptenc= "onPointerEnterCapture={...}"
+onPointerEnterCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerLeave={...} (onptlv=)
+
+snippet onptlv= "onPointerLeave={...}"
+onPointerLeave={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerLeaveCapture={...} (onptlvc=)
+
+snippet onptlvc= "onPointerLeaveCapture={...}"
+onPointerLeaveCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerOver={...} (onptov=)
+
+snippet onptov= "onPointerOver={...}"
+onPointerOver={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerOverCapture={...} (onptovc=)
+
+snippet onptovc= "onPointerOverCapture={...}"
+onPointerOverCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerOut={...} (onptot=)
+
+snippet onptot= "onPointerOut={...}"
+onPointerOut={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onPointerOutCapture={...} (onptotc=)
+
+snippet onptotc= "onPointerOutCapture={...}"
+onPointerOutCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onGotPointerCapture={...} (ongtptc=)
+
+snippet ongtptc= "onGotPointerCapture={...}"
+onGotPointerCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onGotPointerCaptureCapture={...} (ongtptcc=)
+
+snippet ongtptcc= "onGotPointerCaptureCapture={...}"
+onGotPointerCaptureCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLostPointerCapture={...} (onlptc=)
+
+snippet onlptc= "onLostPointerCapture={...}"
+onLostPointerCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onLostPointerCaptureCapture={...} (onlptcc=)
+
+snippet onlptcc= "onLostPointerCaptureCapture={...}"
+onLostPointerCaptureCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onScroll={...} (onscrl=)
+
+snippet onscrl= "onScroll={...}"
+onScroll={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onScrollCapture={...} (onscrlc=)
+
+snippet onscrlc= "onScrollCapture={...}"
+onScrollCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onWheel={...} (onwhl=)
+
+snippet onwhl= "onWheel={...}"
+onWheel={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onWheelCapture={...} (onwhlc=)
+
+snippet onwhlc= "onWheelCapture={...}"
+onWheelCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onAnimationStart={...} (onanst=)
+
+snippet onanst= "onAnimationStart={...}"
+onAnimationStart={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAnimationStartCapture={...} (onanstc=)
+
+snippet onanstc= "onAnimationStartCapture={...}"
+onAnimationStartCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAnimationEnd={...} (onanen=)
+
+snippet onanen= "onAnimationEnd={...}"
+onAnimationEnd={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAnimationEndCapture={...} (onanenc=)
+
+snippet onanenc= "onAnimationEndCapture={...}"
+onAnimationEndCapture={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAnimationIteration={...} (onanit=)
+
+snippet onanit= "onAnimationIteration={...}"
+onAnimationIteration={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onAnimationIterationCapture={...} (onanitc=)
+
+snippet onanitc= "onAnimationIterationCapture={...}"
+onAnimationIterationCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# {{{ onTransitionEnd={...} (ontren=)
+
+snippet ontren= "onTransitionEnd={...}"
+onTransitionEnd={${1:value}}$0
+endsnippet
+
+# }}}
+# {{{ onTransitionEndCapture={...} (ontrenc=)
+
+snippet ontrenc= "onTransitionEndCapture={...}"
+onTransitionEndCapture={${1:value}}$0
+endsnippet
+
+# }}}
+
+# }}}
 # {{{ exports
 
-# {{{ export propTypes
+# {{{ export propTypes (expt)
 
 snippet expt "export propTypes"
 export const propTypes = {
@@ -46,7 +1216,7 @@ export const propTypes = {
 endsnippet
 
 # }}}
-# {{{ export defaultProps
+# {{{ export defaultProps (exdp)
 
 snippet exdp "export defaultProps"
 export const defaultProps = {
@@ -59,91 +1229,91 @@ endsnippet
 # }}}
 # {{{ imports
 
-# {{{ import classNames
+# {{{ import classNames (imcN)
 
 snippet imcN "import classNames from 'classnames'"
 import classNames from 'classnames'$0
 endsnippet
 
 # }}}
-# {{{ import clsx
+# {{{ import clsx (imcn)
 
 snippet imcn "import cn from 'clsx'"
 import cn from 'clsx'$0
 endsnippet
 
 # }}}
-# {{{ import React
+# {{{ import React (imr)
 
 snippet imr "import React from 'react'"
 import React from 'react'$0
 endsnippet
 
 # }}}
-# {{{ import React, { ... }
+# {{{ import React, { ... } (imr{)
 
-snippet imr "import React, { ... } from 'react'"
+snippet imr{ "import React, { ... } from 'react'"
 import React, { ${1:extraImports} } from 'react'$0
 endsnippet
 
 # }}}
-# {{{ import prop-types
+# {{{ import prop-types (impt)
 
 snippet impt "import 'prop-types'"
 import PropTypes from 'prop-types'$0
 endsnippet
 
 # }}}
-# {{{ import OU from './utils'
+# {{{ import OU from './utils' (imOU)
 
 snippet imOU "import * as OU from './utils'"
 import * as OU from './utils'$0
 endsnippet
 
 # }}}
-# {{{ import OH from './hooks'
+# {{{ import OH from './hooks' (imOH)
 
 snippet imOH "import * as OH from './hooks'"
 import * as OH from './hooks'$0
 endsnippet
 
 # }}}
-# {{{ import OC from './components'
+# {{{ import OC from './components' (imOC)
 
 snippet imOC "import * as OC from './components'"
 import * as OC from './components'$0
 endsnippet
 
 # }}}
-# {{{ import DB from '@/db'
+# {{{ import DB from '@/db' (imDB)
 
 snippet imDB "import * as DB from '@/db'"
 import * as DB from '@/db'$0
 endsnippet
 
 # }}}
-# {{{ import API from '@/api'
+# {{{ import API from '@/api' (imAPI)
 
 snippet imAPI "import * as API from '@/api'"
 import * as API from '@/api'$0
 endsnippet
 
 # }}}
-# {{{ import U from '@/utils'
+# {{{ import U from '@/utils' (imU)
 
 snippet imU "import * as U from '@/utils'"
 import * as U from '@/utils'$0
 endsnippet
 
 # }}}
-# {{{ import H from '@/hooks'
+# {{{ import H from '@/hooks' (imH)
 
 snippet imH "import * as H from '@/hooks'"
 import * as H from '@/hooks'$0
 endsnippet
 
 # }}}
-# {{{ import C from '@/components'
+# {{{ import C from '@/components' (imC)
 
 snippet imC "import * as C from '@/components'"
 import * as C from '@/components'$0
@@ -154,56 +1324,56 @@ endsnippet
 # }}}
 # {{{ hooks
 
-# {{{ useId
+# {{{ useId (usid)
 
 snippet usid "useId"
 const	${1:name} = useId()$0
 endsnippet
 
 # }}}
-# {{{ useRef
+# {{{ useRef (usrf)
 
 snippet usrf "useRef"
 const	${1:name} = useRef(${2:initialValue})$0
 endsnippet
 
 # }}}
-# {{{ useContext
+# {{{ useContext (usct)
 
 snippet usct "useContext"
 const	${1:name} = useContext(${2:context})$0
 endsnippet
 
 # }}}
-# {{{ useReducer
+# {{{ useReducer (usrd)
 
 snippet usrd "useReducer"
 const	[${1:state}, dispatch] = useReducer(${2:reducer}, ${3:initialArg}, ${4:init})$0
 endsnippet
 
 # }}}
-# {{{ useDebugValue
+# {{{ useDebugValue (usdb)
 
 snippet usdb "useDebugValue"
 useDebugValue(${1:value}, ${2:format})$0
 endsnippet
 
 # }}}
-# {{{ useTransition
+# {{{ useTransition (ustr)
 
 snippet ustr "useTransition"
 const [${1:isPending}, ${2:startTransition}] = useTransition()$0
 endsnippet
 
 # }}}
-# {{{ useState
+# {{{ useState (usst)
 
 snippet usst "useState"
 const [${1:item}, ${2:setItem}] = useState<${3:type}>(${4:initialValue})$0
 endsnippet
 
 # }}}
-# {{{ useCallback
+# {{{ useCallback (usca)
 
 snippet usca "useCallback"
 const ${1:name} = useCallback((${2:args}): ${3:returnType} => {
@@ -212,7 +1382,7 @@ const ${1:name} = useCallback((${2:args}): ${3:returnType} => {
 endsnippet
 
 # }}}
-# {{{ useMemo
+# {{{ useMemo (usme)
 
 snippet usme "useMemo(...)"
 const ${1:name} = useMemo((): ${2:returnType} => {
@@ -222,7 +1392,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ useEffect
+# {{{ useEffect (usef)
 
 snippet usef "useEffect(...)"
 const ${1:name} = useEffect((): void => {
@@ -236,7 +1406,7 @@ endsnippet
 # }}}
 # {{{ redux
 
-# {{{ dispatch
+# {{{ dispatch (disp)
 
 snippet disp "dispatch"
 dispatch(${1:action})$0

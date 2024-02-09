@@ -1,6 +1,6 @@
-# {{{ imports and exports
+# {{{ exports
 
-# {{{ export
+# {{{ export (exp)
 
 snippet exp "export"
 export $1
@@ -8,44 +8,42 @@ $0
 endsnippet
 
 # }}}
-# {{{ export default
+# {{{ export * from path (expf)
 
-snippet exdef "export default"
+snippet expf "export * from 'path'"
+export * from "$1"
+$0
+endsnippet
+
+# }}}
+# {{{ export default (expd)
+
+snippet expd "export default"
 export default $1
 $0
 endsnippet
 
 # }}}
-# {{{ export {... }
+# {{{ export { ... } (expb)
 
-snippet exob "export { ... }"
+snippet expb "export { ... }"
 export { $1 }
 $0
 endsnippet
 
 # }}}
-# {{{ import
+
+# }}}
+# {{{ imports
+
+# {{{ import (im)
 
 snippet im "import"
 import $1 from '$2'
 endsnippet
 
 # }}}
-# {{{ import react
-
-snippet imreact "import react"
-import React from 'react'
-endsnippet
-
-# }}}
-# {{{ import import classnames
-
-snippet imclassnames "import classnames"
-import classNames from 'classnames'
-endsnippet
-
-# }}}
-# {{{ import U from utils
+# {{{ import U from utils (imU)
 
 snippet imU "import * as U from 'utils'"
 import * as U from 'utils'
@@ -57,203 +55,203 @@ endsnippet
 # }}}
 # {{{ lodash
 
-# {{{ import _includes
+# {{{ import _includes (im_in)
 
 snippet im_in "import _includes"
 import _includes from 'lodash/includes'
 endsnippet
 
 # }}}
-# {{{ import _filter
+# {{{ import _filter (im_fil)
 
 snippet im_fil "import _filter"
 import _filter from 'lodash/filter'
 endsnippet
 
 # }}}
-# {{{ import _subtract
+# {{{ import _subtract (im_sub)
 
 snippet im_sub "import _subtract"
 import _subtract from 'lodash/subtract'
 endsnippet
 
 # }}}
-# {{{ import _map
+# {{{ import _map (im_mp)
 
 snippet im_mp "import _map"
 import _map from 'lodash/map'
 endsnippet
 
 # }}}
-# {{{ import _keys
+# {{{ import _keys (im_k)
 
 snippet im_k "import _keys"
 import _keys from 'lodash/keys'
 endsnippet
 
 # }}}
-# {{{ import _values
+# {{{ import _values (im_v)
 
 snippet im_v "import _values"
 import _values from 'lodash/values'
 endsnippet
 
 # }}}
-# {{{ import _flatten
+# {{{ import _flatten (im_fl)
 
 snippet im_fl "import _flatten"
 import _flatten from 'lodash/flatten'
 endsnippet
 
 # }}}
-# {{{ import _flattenDeep
+# {{{ import _flattenDeep (im_fld)
 
 snippet im_fld "import _flattenDeep"
 import _flattenDeep from 'lodash/flattenDeep'
 endsnippet
 
 # }}}
-# {{{ import _uniq
+# {{{ import _uniq (im_un)
 
 snippet im_un "import _uniq"
 import _uniq from 'lodash/uniq'
 endsnippet
 
 # }}}
-# {{{ import _isUndefined
+# {{{ import _isUndefined (im_isud)
 
 snippet im_isud "import _isUndefined"
 import _isUndefined from 'lodash/isUndefined'
 endsnippet
 
 # }}}
-# {{{ import _isNil
+# {{{ import _isNil (im_isni)
 
 snippet im_isni "import _isNil"
 import _isNil from 'lodash/isNil'
 endsnippet
 
 # }}}
-# {{{ import _isNull
+# {{{ import _isNull (im_isnl)
 
 snippet im_isnl "import _isNull"
 import _isNull from 'lodash/isNull'
 endsnippet
 
 # }}}
-# {{{ import _isEqual
+# {{{ import _isEqual (im_iseq)
 
 snippet im_iseq "import _isEqual"
 import _isEqual from 'lodash/isEqual'
 endsnippet
 
 # }}}
-# {{{ import _isEmpty
+# {{{ import _isEmpty (im_ise)
 
 snippet im_ise "import _isEmpty"
 import _isEmpty from 'lodash/isEmpty'
 endsnippet
 
 # }}}
-# {{{ import _isObject
+# {{{ import _isObject (im_iso)
 
 snippet im_iso "import _isObject"
 import _isObject from 'lodash/isObject'
 endsnippet
 
 # }}}
-# {{{ import _isString
+# {{{ import _isString (im_iss)
 
 snippet im_iss "import _isString"
 import _isString from 'lodash/isString'
 endsnippet
 
 # }}}
-# {{{ import _isError
+# {{{ import _isError (im_iser)
 
 snippet im_iser "import _isError"
 import _isError from 'lodash/isError'
 endsnippet
 
 # }}}
-# {{{ import _isDate
+# {{{ import _isDate (im_isd)
 
 snippet im_isd "import _isDate"
 import _isDate from 'lodash/isDate'
 endsnippet
 
 # }}}
-# {{{ import _isBoolean
+# {{{ import _isBoolean (im_isb)
 
 snippet im_isb "import _isBoolean"
 import _isBoolean from 'lodash/isBoolean'
 endsnippet
 
 # }}}
-# {{{ import _isNumber
+# {{{ import _isNumber (im_isn)
 
 snippet im_isn "import _isNumber"
 import _isNumber from 'lodash/isNumber'
 endsnippet
 
 # }}}
-# {{{ import _isArray
+# {{{ import _isArray (im_isa)
 
 snippet im_isa "import _isArray"
 import _isArray from 'lodash/isArray'
 endsnippet
 
 # }}}
-# {{{ import _isFinite
+# {{{ import _isFinite (im_isfi)
 
 snippet im_isfi "import _isFinite"
 import _isFinite from 'lodash/isFinite'
 endsnippet
 
 # }}}
-# {{{ import _isFunction
+# {{{ import _isFunction (im_isfu)
 
 snippet im_isfu "import _isFunction"
 import _isFunction from 'lodash/isFunction'
 endsnippet
 
 # }}}
-# {{{ import _uniqBy
+# {{{ import _uniqBy (im_unb)
 
 snippet im_unb "import _uniqBy"
 import _uniqBy from 'lodash/uniqBy'
 endsnippet
 
 # }}}
-# {{{ import _compact
+# {{{ import _compact (im_co)
 
 snippet im_co "import _compact"
 import _compact from 'lodash/compact'
 endsnippet
 
 # }}}
-# {{{ import _sum
+# {{{ import _sum (im_s)
 
 snippet im_s "import _sum"
 import _sum from 'lodash/sum'
 endsnippet
 
 # }}}
-# {{{ import _min
+# {{{ import _min (im_mi)
 
 snippet im_mi "import _min"
 import _min from 'lodash/min'
 endsnippet
 
 # }}}
-# {{{ import _max
+# {{{ import _max (im_ma)
 
 snippet im_ma "import _max"
 import _max from 'lodash/max'
 endsnippet
 
 # }}}
-# {{{ import _chunk
+# {{{ import _chunk (im_ch)
 
 snippet im_ch "import _chunk"
 import _chunk from 'lodash/chunk'
@@ -261,203 +259,203 @@ endsnippet
 
 # }}}
 
-# {{{ _includes
+# {{{ _includes (_in)
 
 snippet _in "_includes"
 const $1 = _includes($2)$0
 endsnippet
 
 # }}}
-# {{{ _filter
+# {{{ _filter (_fi)
 
 snippet _fi "_filter"
 const $1 = _filter($2)$0
 endsnippet
 
 # }}}
-# {{{ _subtract
+# {{{ _subtract (_sub)
 
 snippet _sub "_subtract"
 const $1 = _subtract($2)$0
 endsnippet
 
 # }}}
-# {{{ _map
+# {{{ _map (_mp)
 
 snippet _mp "_map"
 const $1 = _map($2)$0
 endsnippet
 
 # }}}
-# {{{ _keys
+# {{{ _keys (_k)
 
 snippet _k "_keys"
 const $1 = _keys($2)$0
 endsnippet
 
 # }}}
-# {{{ _values
+# {{{ _values (_v)
 
 snippet _v "_values"
 const $1 = _values($2)$0
 endsnippet
 
 # }}}
-# {{{ _flatten
+# {{{ _flatten (_fl)
 
 snippet _fl "_flatten"
 const $1 = _flatten($2)$0
 endsnippet
 
 # }}}
-# {{{ _flattenDeep
+# {{{ _flattenDeep (_fld)
 
 snippet _fld "_flattenDeep"
 const $1 = _flattenDeep($2)$0
 endsnippet
 
 # }}}
-# {{{ _uniq
+# {{{ _uniq (_un)
 
 snippet _un "_uniq"
 const $1 = _uniq($2)$0
 endsnippet
 
 # }}}
-# {{{ _isUndefined
+# {{{ _isUndefined (_isud)
 
 snippet _isud "_isUndefined"
 const $1 = _isUndefined($2)$0
 endsnippet
 
 # }}}
-# {{{ _isNil
+# {{{ _isNil (_isni)
 
 snippet _isni "const ... = _isNil(...)"
 const $1 = _isNil($2)$0
 endsnippet
 
 # }}}
-# {{{ _isNull
+# {{{ _isNull (_isnl)
 
 snippet _isnl "const ... = _isNull(...)"
 const $1 = _isNull($2)$0
 endsnippet
 
 # }}}
-# {{{ _isEqual
+# {{{ _isEqual (_iseq)
 
 snippet _iseq "const ... = _isEqual(...)"
 const $1 = _isEqual($2)$0
 endsnippet
 
 # }}}
-# {{{ _isEmpty
+# {{{ _isEmpty (_ise)
 
 snippet _ise "const ... = _isEmpty(...)"
 const $1 = _isEmpty($2)$0
 endsnippet
 
 # }}}
-# {{{ _isObject
+# {{{ _isObject (_iso)
 
 snippet _iso "const ... = _isObject(...)"
 const $1 = _isObject($2)$0
 endsnippet
 
 # }}}
-# {{{ _isString
+# {{{ _isString (_iss)
 
 snippet _iss "const ... = _isString(...)"
 const $1 = _isString($2)$0
 endsnippet
 
 # }}}
-# {{{ _isError
+# {{{ _isError (_iser)
 
 snippet _iser "const ... = _isError(...)"
 const $1 = _isError($2)$0
 endsnippet
 
 # }}}
-# {{{ _isDate
+# {{{ _isDate (_isd)
 
 snippet _isd "const ... = _isDate(...)"
 const $1 = _isDate($2)$0
 endsnippet
 
 # }}}
-# {{{ _isBoolean
+# {{{ _isBoolean (_isb)
 
 snippet _isb "const ... = _isBoolean(...)"
 const $1 = _isBoolean($2)$0
 endsnippet
 
 # }}}
-# {{{ _isNumber
+# {{{ _isNumber (_isn)
 
 snippet _isn "const ... = _isNumber(...)"
 const $1 = _isNumber($2)$0
 endsnippet
 
 # }}}
-# {{{ _isArray
+# {{{ _isArray (_isa)
 
 snippet _isa "const ... = _isArray(...)"
 const $1 = _isArray($2)$0
 endsnippet
 
 # }}}
-# {{{ _isFinite
+# {{{ _isFinite (_isfi)
 
 snippet _isfi "const ... = _isFinite(...)"
 const $1 = _isFinite($2)$0
 endsnippet
 
 # }}}
-# {{{ _isFunction
+# {{{ _isFunction (_isfu)
 
 snippet _isfu "const ... = _isFunction(...)"
 const $1 = _isFunction($2)$0
 endsnippet
 
 # }}}
-# {{{ _uniqBy
+# {{{ _uniqBy (_unb)
 
 snippet _unb "const ... = _uniqBy(...)"
 const $1 = _uniqBy($2)$0
 endsnippet
 
 # }}}
-# {{{ _compact
+# {{{ _compact (_co)
 
 snippet _co "const ... = _compact(...)"
 const $1 = _compact($2)$0
 endsnippet
 
 # }}}
-# {{{ _sum
+# {{{ _sum (_s)
 
 snippet _s "const ... = _sum(...)"
 const $1 = _sum($2)$0
 endsnippet
 
 # }}}
-# {{{ _min
+# {{{ _min (_mi)
 
 snippet _mi "const ... = _min(...)"
 const $1 = _min($2)$0
 endsnippet
 
 # }}}
-# {{{ _max
+# {{{ _max (_ma)
 
 snippet _ma "const ... = _max(...)"
 const $1 = _max($2)$0
 endsnippet
 
 # }}}
-# {{{ _chunk
+# {{{ _chunk (_ch)
 
 snippet _ch "const ... = _chunk(...)"
 const $1 = _chunk($2)$0
@@ -468,7 +466,7 @@ endsnippet
 # }}}
 # {{{ general
 
-# {{{ console.log
+# {{{ console.log (clo)
 
 snippet clo "console.log"
 console.log($1)
@@ -476,7 +474,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ console.error
+# {{{ console.error (cle)
 
 snippet cle "console.error"
 console.error($1)
@@ -484,14 +482,14 @@ $0
 endsnippet
 
 # }}}
-# {{{ return
+# {{{ return (ret)
 
 snippet ret "return"
 return $1
 endsnippet
 
 # }}}
-# {{{ generator function
+# {{{ generator function (gfu)
 
 snippet gfu "generator function"
 function* ${1:name}($2) {
@@ -500,7 +498,7 @@ function* ${1:name}($2) {
 endsnippet
 
 # }}}
-# {{{ anonymous function
+# {{{ anonymous function (afu)
 
 snippet afu "anonymous function"
 const ${1:name} = ($2): $3 => {
@@ -509,7 +507,7 @@ const ${1:name} = ($2): $3 => {
 endsnippet
 
 # }}}
-# {{{ if statement
+# {{{ if statement (if)
 
 snippet if "if statement"
 if ($1) {
@@ -518,7 +516,7 @@ if ($1) {
 endsnippet
 
 # }}}
-# {{{ else statement
+# {{{ else statement (el)
 
 snippet el "else"
 } else {
@@ -527,7 +525,7 @@ snippet el "else"
 endsnippet
 
 # }}}
-# {{{ else if statement
+# {{{ else if statement (elif)
 
 snippet elif "else if"
 } else if ($1) {
@@ -536,7 +534,7 @@ snippet elif "else if"
 endsnippet
 
 # }}}
-# {{{ for loop
+# {{{ for loop (for)
 
 snippet for "for loop"
 for (let ${1:i} = ${2:0}; $3, ${4:i += 1}) {
@@ -549,7 +547,7 @@ endsnippet
 # }}}
 # {{{ tests
 
-# {{{ describe
+# {{{ describe (desc)
 
 snippet desc "describe"
 describe('$1', () => {
@@ -558,7 +556,7 @@ describe('$1', () => {
 endsnippet
 
 # }}}
-# {{{ it
+# {{{ it (it)
 
 snippet it "it"
 it('$1', () => {
@@ -567,7 +565,7 @@ it('$1', () => {
 endsnippet
 
 # }}}
-# {{{ it async
+# {{{ it async (ita)
 
 snippet ita "it async"
 it('$1', async () => {
@@ -576,14 +574,14 @@ it('$1', async () => {
 endsnippet
 
 # }}}
-# {{{ expect
+# {{{ expect (expe)
 
 snippet expe "expect"
 expect($1).$2
 endsnippet
 
 # }}}
-# {{{ expect.toHaveTextContent
+# {{{ expect.toHaveTextContent (expetext)
 
 snippet expetext "expect(...).toHaveTextContent(...)"
 expect($1).toHaveTextContent('$2')
@@ -591,7 +589,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ expect.toEqual
+# {{{ expect.toEqual (expeeq)
 
 snippet expeeq "expect(...).toEqual(...)"
 expect($1).toEqual($2)
@@ -599,7 +597,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ expect.toBeDefined
+# {{{ expect.toBeDefined (expedef)
 
 snippet expedef "expect(...).toBeDefined()"
 expect($1).toBeDefined()
@@ -608,7 +606,7 @@ endsnippet
 
 
 # }}}
-# {{{ expect.toMatchSnapshot
+# {{{ expect.toMatchSnapshot (expesnap)
 
 snippet expesnap "expect(...).toMatchSnapshot()"
 expect($1).toMatchSnapshot()
@@ -620,7 +618,7 @@ endsnippet
 # }}}
 # {{{ destructuring
 
-# {{{ const {... } = ...}
+# {{{ const {... } = ...} (c{)
 
 snippet c{ "const { ... } = ..."
 const { $1 } = $2
@@ -628,7 +626,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ const [... ] = ...
+# {{{ const [... ] = ... (c[)
 
 snippet c[ "const [ ... ] = ..."
 const [ $1 ] = $2
@@ -636,7 +634,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ let { ... } = ...}
+# {{{ let { ... } = ...} (l{)
 
 snippet l{ "let { ... } = ..."
 let { $1 } = $2
@@ -644,7 +642,7 @@ $0
 endsnippet
 
 # }}}
-# {{{ let [... ] = ...
+# {{{ let [... ] = ... (l[)
 
 snippet l[ "let [ ... ] = ..."
 let [ $1 ] = $2
