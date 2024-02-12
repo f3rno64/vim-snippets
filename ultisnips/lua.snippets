@@ -1,0 +1,23 @@
+# {{{ require(...) (req)
+
+snippet req "require(...)"
+require('${1:module}')
+endsnippet
+
+# }}}
+# {{{ require(...).setup({ ... }) (reqs)
+
+snippet reqs "require(...).setup({ ... })"
+require('${1:module}').setup({
+	${2{$VISUAL:content}}
+})$0
+endsnippet
+
+# }}}
+# {{{ local <var> = require(...) (lreq)
+
+snippet lreq "local <var> = require(...)"
+local ${1:var} = require('${2:module}')
+endsnippet
+
+# }}}

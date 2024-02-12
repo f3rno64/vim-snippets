@@ -1,3 +1,116 @@
+# {{{ comment directives
+
+# {{{ // prettier-ignore (cpi)
+
+snippet cpi "// prettier-ignore"
+// prettier-ignore$0
+endsnippet
+
+# }}}
+# {{{ // @ts-ignore (ctsi)
+
+snippet ctsi "// @ts-ignore
+// @ts-ignore$0
+endsnippet
+
+# }}}
+# {{{ // @ts-expect-error (ctserr)
+
+snippet ctseerr "// @ts-expect-error"
+// @ts-expect-error$0
+endsnippet
+
+# }}}
+# {{{ // eslint-disable-next-line [code] (cesdnl)
+
+snippet cesdnl "// eslint-disable-next-line [code]"
+// eslint-disable-next-line {$1:code}$0
+endsnippet
+
+# }}}
+
+# }}}
+# {{{ general
+
+# {{{ console.log (clo)
+
+snippet clo "console.log"
+console.log($1)
+$0
+endsnippet
+
+# }}}
+# {{{ console.error (cle)
+
+snippet cle "console.error"
+console.error($1)
+$0
+endsnippet
+
+# }}}
+# {{{ return (ret)
+
+snippet ret "return"
+return $1
+endsnippet
+
+# }}}
+# {{{ generator function (gfu)
+
+snippet gfu "generator function"
+function* ${1:name}($2) {
+	$0
+}
+endsnippet
+
+# }}}
+# {{{ anonymous function (afu)
+
+snippet afu "anonymous function"
+const ${1:name} = ($2): $3 => {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# }}}
+# {{{ if statement (if)
+
+snippet if "if statement"
+if ($1) {
+	$0
+}
+endsnippet
+
+# }}}
+# {{{ else statement (el)
+
+snippet el "else"
+} else {
+	$0
+}
+endsnippet
+
+# }}}
+# {{{ else if statement (elif)
+
+snippet elif "else if"
+} else if ($1) {
+	$0
+}
+endsnippet
+
+# }}}
+# {{{ for loop (for)
+
+snippet for "for loop"
+for (let ${1:i} = ${2:0}; $3, ${4:i += 1}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# }}}
+
+# }}}
 # {{{ exports
 
 # {{{ export (exp)
@@ -459,87 +572,6 @@ endsnippet
 
 snippet _ch "const ... = _chunk(...)"
 const $1 = _chunk($2)$0
-endsnippet
-
-# }}}
-
-# }}}
-# {{{ general
-
-# {{{ console.log (clo)
-
-snippet clo "console.log"
-console.log($1)
-$0
-endsnippet
-
-# }}}
-# {{{ console.error (cle)
-
-snippet cle "console.error"
-console.error($1)
-$0
-endsnippet
-
-# }}}
-# {{{ return (ret)
-
-snippet ret "return"
-return $1
-endsnippet
-
-# }}}
-# {{{ generator function (gfu)
-
-snippet gfu "generator function"
-function* ${1:name}($2) {
-	$0
-}
-endsnippet
-
-# }}}
-# {{{ anonymous function (afu)
-
-snippet afu "anonymous function"
-const ${1:name} = ($2): $3 => {
-	${0:${VISUAL}}
-}
-endsnippet
-
-# }}}
-# {{{ if statement (if)
-
-snippet if "if statement"
-if ($1) {
-	$0
-}
-endsnippet
-
-# }}}
-# {{{ else statement (el)
-
-snippet el "else"
-} else {
-	$0
-}
-endsnippet
-
-# }}}
-# {{{ else if statement (elif)
-
-snippet elif "else if"
-} else if ($1) {
-	$0
-}
-endsnippet
-
-# }}}
-# {{{ for loop (for)
-
-snippet for "for loop"
-for (let ${1:i} = ${2:0}; $3, ${4:i += 1}) {
-	${0:${VISUAL}}
-}
 endsnippet
 
 # }}}
